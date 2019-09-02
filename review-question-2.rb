@@ -9,6 +9,10 @@ class Car
     @model =  model
     @@all << self
   end
+  
+  def self.new_from_hash(hash)
+    car = self.new(hash[:make], hash[:model])
+  end
 
   # def initialize(car)
   #   @make =   car[:make]
